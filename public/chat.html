@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <meta name="description" content="Real-time chat room with WhatsApp-inspired design">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="icon" href="assets/icons/logo-icon.svg" type="image/svg+xml">
+</head>
+<body class="light-theme">
+    <div class="chat-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Room Info</h3>
+                <button id="leave-room" class="btn-leave">Leave</button>
+            </div>
+            <div class="room-info">
+                <p><strong>Room ID:</strong> <span id="current-room-id"></span></p>
+                <p><strong>Participants:</strong> <span id="participant-count">1</span></p>
+            </div>
+            <div class="participants-list">
+                <h4>Online Users</h4>
+                <ul id="participants"></ul>
+            </div>
+        </div>
+        
+        <div class="main-chat">
+            <div class="chat-header">
+                <div class="chat-info">
+                    <h3>ChatApp</h3>
+                    <div id="typing-indicator"></div>
+                </div>
+                <div class="connection-status">
+                    <span id="chat-connection-status">Connected</span>
+                    <button class="chat-theme-toggle" id="chat-theme-toggle" aria-label="Toggle theme">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 20V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.93 4.93L6.34 6.34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.66 17.66L19.07 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.34 17.66L4.93 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.07 4.93L17.66 6.34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="messages-container" id="messages-container">
+                <div class="message received">
+                    <div class="message-sender">System</div>
+                    <div class="message-content">
+                        <p>Welcome to the chat room! Messages are end-to-end encrypted.</p>
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <div class="input-options">
+                    <button id="attach-btn" class="btn-option" title="Attach file">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M11.5 21.5H6.5C3.5 21.5 2 20 2 17V7C2 4 3.5 2.5 6.5 2.5H17.5C20.5 2.5 22 4 22 7V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.5 7.5H10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M15.5 12.5H9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M11.5 17.5H9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M20.2799 15.5L15.9999 19.78C15.7499 20.03 15.7499 20.43 15.9999 20.68C16.2499 20.93 16.6499 20.93 16.8999 20.68L21.1799 16.4C21.4299 16.15 21.4299 15.75 21.1799 15.5C20.9299 15.25 20.5299 15.25 20.2799 15.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.9999 15.5L20.2799 19.78C20.5299 20.03 20.5299 20.43 20.2799 20.68C20.0299 20.93 19.6299 20.93 19.3799 20.68L15.0999 16.4C14.8499 16.15 14.8499 15.75 15.0999 15.5C15.3499 15.25 15.7499 15.25 15.9999 15.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button id="emoji-btn" class="btn-option" title="Emoji">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 9H15.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 9H9.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button id="voice-btn" class="btn-option" title="Record voice message">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 3V11M12 3C10.3431 3 9 4.34315 9 6V11C9 12.6569 10.3431 14 12 14C13.6569 14 15 12.6569 15 11V6C15 4.34315 13.6569 3 12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 11C19 14.866 15.866 18 12 18M5 11C5 14.866 8.13401 18 12 18M12 18V22M8 22H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="text-input-container">
+                    <input type="text" id="message-input" placeholder="Type a message...">
+                    <button id="send-btn" class="btn-send">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 2L11 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="preview-container" class="preview-container hidden">
+                <div class="preview-header">
+                    <span>Preview</span>
+                    <button id="cancel-preview">×</button>
+                </div>
+                <div class="preview-content"></div>
+                <button id="send-preview" class="btn-send">Send</button>
+            </div>
+            
+            <div id="voice-recorder" class="voice-recorder hidden">
+                <div class="recorder-header">
+                    <span>Recording...</span>
+                    <button id="cancel-recording">×</button>
+                </div>
+                <div class="recorder-content">
+                    <div class="recording-indicator">
+                        <div class="pulse"></div>
+                        <span id="recording-timer">00:00</span>
+                    </div>
+                </div>
+                <button id="stop-recording" class="btn-stop">Stop</button>
+            </div>
+        </div>
+    </div>
+
+    <input type="file" id="file-input" hidden accept="image/*,audio/*,video/*,.pdf,.doc,.docx,.txt">
+    
+    <script src="js/chat.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatApp</title>
+    <meta name="description" content="Real-time chat application with WhatsApp-inspired design. Connect with friends and colleagues instantly.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="icon" href="assets/icons/logo-icon.svg" type="image/svg+xml">
+</head>
+<body class="light-theme">
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="nav-logo">
+                    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="ChatApp Logo">
+                    <span>ChatApp</span>
+                </a>
+                <div class="nav-menu">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#how-it-works" class="nav-link">How It Works</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 20V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.93 4.93L6.34 6.34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.66 17.66L19.07 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.34 17.66L4.93 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.07 4.93L17.66 6.34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+         <section class="hero">
+        <div class="floating-elements">
+            <div class="floating-element element-1"></div>
+            <div class="floating-element element-2"></div>
+            <div class="floating-element element-3"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Connect with Everyone in Real-Time</h1>
+                <p class="hero-description">Experience seamless communication with our WhatsApp-inspired chat application. Create rooms, share files, and chat instantly with friends and colleagues.</p>
+                <div class="hero-actions">
+                    <a href="#get-started" class="btn btn-primary">
+                        <i class="fas fa-comments" style="margin-right: 10px;"></i>
+                        Get Started
+                    </a>
+                    <a href="#demo" class="btn btn-secondary">
+                        <i class="fas fa-play-circle" style="margin-right: 10px;"></i>
+                        View Demo
+                    </a>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>50K+</h3>
+                            <p>Active Users</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>1.2M+</h3>
+                            <p>Messages Daily</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="chat-demo">
+                    <div class="chat-header">
+                        <div class="chat-avatar">
+                            <i class="fas fa-user-group"></i>
+                        </div>
+                        <div>
+                            <h3>Team Chat</h3>
+                            <p>5 participants</p>
+                        </div>
+                    </div>
+                    <div class="chat-content">
+                        <div class="message received">
+                            <div class="message-content">
+                                <p>Hey team! How's the project going?</p>
+                                <span class="message-time">10:24 AM</span>
+                            </div>
+                        </div>
+                        <div class="message sent">
+                            <div class="message-content">
+                                <p>Going great! Just finished the new UI design.</p>
+                                <span class="message-time">10:25 AM</span>
+                            </div>
+                        </div>
+                        <div class="message received">
+                            <div class="message-content">
+                                <p>That's awesome! Can't wait to see it 🎉</p>
+                                <span class="message-time">10:26 AM</span>
+                            </div>
+                        </div>
+                        <div class="typing-indicator">
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Real-Time Messaging</h3>
+                    <p>Send and receive messages instantly with WebSocket technology.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🖼️</div>
+                    <h3>Media Sharing</h3>
+                    <p>Share images, videos, and files with preview before sending.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>Voice Messages</h3>
+                    <p>Record and send voice messages with the built-in recorder.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌓</div>
+                    <h3>Dark/Light Mode</h3>
+                    <p>Switch between themes based on your preference or time of day.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Private</h3>
+                    <p>All data is encrypted and rooms are deleted when not in use.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Works perfectly on desktop, tablet, and mobile devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="get-started" class="get-started">
+        <div class="container">
+            <h2 class="section-title">Start Chatting Now</h2>
+            <div class="content-wrapper">
+                <div class="image-container">
+                    <!-- Using a base64 encoded SVG as placeholder for the illustration -->
+                    <img src="assets/images/get-started.jpg" alt="Chat Illustration" class="illustration">
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Join the Conversation</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <label for="username">Your Name</label>
+                                <input type="text" id="username" placeholder="Enter your name" maxlength="20">
+                            </div>
+                            <button id="create-room" class="btn btn-primary">Create New Chat Room</button>
+                            <div class="divider">OR</div>
+                            <div class="input-group">
+                                <label for="room-id">Room ID</label>
+                                <input type="text" id="room-id" placeholder="Enter Room ID">
+                            </div>
+                            <button id="join-room" class="btn btn-secondary">Join Room</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+         <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">👤</div>
+                    <div class="step-number">1</div>
+                    <h3>Enter Your Name</h3>
+                    <p>Choose a display name that will be visible to other participants.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">🚪</div>
+                    <div class="step-number">2</div>
+                    <h3>Create or Join a Room</h3>
+                    <p>Create a new room or join an existing one with a room ID.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">💬</div>
+                    <div class="step-number">3</div>
+                    <h3>Start Chatting</h3>
+                    <p>Send messages, share files, and communicate in real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">Is ChatApp free to use?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Yes, ChatApp is completely free to use with no hidden costs or subscriptions. We believe in providing seamless communication tools to everyone without financial barriers.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How many people can join a room?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Currently, rooms support up to 20 participants to ensure optimal performance and quality experience for all users. We're continuously working to increase this limit.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Are my messages secure?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>All messages are encrypted in transit using industry-standard TLS encryption. However, for maximum security, we recommend avoiding sharing sensitive personal information in any chat application.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How long are rooms kept active?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Rooms are automatically deleted after 5 minutes of inactivity when all participants have left. This helps us maintain server efficiency and provides a fresh start for new conversations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="faq-decoration decoration-1">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="faq-decoration decoration-2">
+            <i class="fas fa-question-circle"></i>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <!-- SVG logo as data URI -->
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDMwQzIzLjczMTkgMzAgMzAgMjMuNzMxOSAzMCAxNkMzMCA4LjI2ODE0IDIzLjczMTkgMiAxNiAyQzguMjY4MTQgMiAyIDguMjY4MTQgMiAxNkMyIDE5LjA2MTcgMy40MjI0MSAyMS44MjU2IDUuNzU2MjUgMjMuNjU2MkM1Ljc1IDIzLjc1IDUuNzE4NzUgMjQuNTQ2OSA1LjE4NzUgMjUuNzVDNS4wNjI1IDI2LjAwNjIgNC45Mzc1IDI2LjI4MTIgNC44MTI1IDI2LjU2MjVDNC42ODc1IDI2Ljg0MzggNC41NjI1IDI3LjA5MzggNC40Mzc1IDI3LjM0MzhDNi4wNjI1IDI2Ljk2ODggOC4wNjI1IDI2LjI1IDkuNzUgMjUuMTI1QzEwLjg3NSAyNC4zNzUgMTIuMTI1IDIzLjM3NSAxMy4xMjUgMjIuMTI1QzEzLjc1IDIxLjM3NSAxNC4zMTI1IDIwLjUgMTQuNzUgMTkuNUMxNS4xODc1IDE4LjUgMTUuMzc1IDE3LjM3NSAxNS4zNzUgMTYuMjVDMTUuMzc1IDE1LjEyNSAxNS4xODc1IDE0IDE0Ljc1IDEzQzE0LjMxMjUgMTIgMTMuNzUgMTEuMTI1IDEzLjEyNSAxMC4zNzVDMTIuNSA5LjYyNSAxMS43NSA5IDExIDguNUMxMC4yNSA3Ljk2ODc1IDkuMzc1IDcuNTYyNSA4LjUgNy4zMTI1QzcuNjI1IDcuMDYyNSA2LjYyNSA2LjkzNzUgNS43NSA2LjkzNzVDNC44NzUgNi45Mzc1IDQgNy4wNjI1IDMuMTI1IDcuMzEyNUMyLjI1IDcuNTYyNSAxLjUgNy44NzUgMC43NSA4LjMxMjVDMC44NzUgOC4wNjI1IDEuMDYyNSA3LjgxMjUgMS4yNSA3LjU2MjVDMS40Mzc1IDcuMzEyNSAxLjYyNSA3LjA2MjUgMS44MTI1IDYuODQzNzVDMiA2LjYyNSAyLjE4NzUgNi40MDYyNSAyLjM3NSA2LjIxODc1QzIuNTYyNSA2LjAzMTI1IDIuNzUgNS44NDM3NSAyLjk2ODc1IDUuNjg3NUwzLjMxMjUgNS40Mzc1QzMuNS41LjUgMCA0IDBIMjguNjg3NUMyOS4xODc1IDAgMjkuNS41IDI5LjY4NzUgMUMyOS44NzUgMS41IDI5Ljg3NSAyIDI5LjY4NzUgMi41TDI4LjMxMjUgNS40Mzc1QzI4LjEyNSA1LjY4NzUgMjcuODc1IDUuOTM3NSAyNy42ODc1IDYuMTg3NUMyNy41IDYuNDM3NSAyNy4yNSA2LjY4NzUgMjcgNi45Mzc1QzI2Ljc1IDcuMTg3NSAyNi40Mzc1IDcuNDM3NSAyNi4xODc1IDcuNjg3NUMyNS45Mzc1IDcuOTM3NSAyNS42ODc1IDguMTg3NSAyNS40Mzc1IDguMzc1QzI1LjE4NzUgOC41NjI1IDI0Ljg3NSA4Ljc1IDI0LjYyNSA4Ljg3NUMyNC4zNzUgOSAyNCA5LjA2MjUgMjMuNjg3NSA5LjEyNUMyMy4zNzUgOS4xODc1IDIzLjA2MjUgOS4xODc1IDIyLjc1IDkuMTg3NUMyMS44MTI1IDkuMTg3NSAyMC44NzUgOS4zNzUgMjAgOS42ODc1QzE5LjEyNSA5Ljk2ODc1IDE4LjI1IDEwLjM3NSAxNy41IDEwLjg3NUwxNiAxMloiIGZpbGw9IiMxMjhDN0UiLz4KPC9zdmc+" alt="ChatApp Logo">
+                        <span>ChatApp</span>
+                    </a>
+                    <p>Real-time communication made simple and beautiful. Connect with anyone, anywhere with our premium chat experience.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">X<i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link">Fb<i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link">In<i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link">Li<i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features"><i class="fas fa-arrow-right"></i> Features</a>
+                        <a href="#how-it-works"><i class="fas fa-arrow-right"></i> How It Works</a>
+                        <a href="#faq"><i class="fas fa-arrow-right"></i> FAQ</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#"><i class="fas fa-arrow-right"></i> About Us</a>
+                        <a href="#"><i class="fas fa-arrow-right"></i> Blog</a>
+                        <a href="#"><i class="fas fa-arrow-right"></i> Careers</a>
+                        <a href="#"><i class="fas fa-arrow-right"></i> Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="#"><i class="fas fa-arrow-right"></i> Privacy Policy</a>
+                        <a href="#"><i class="fas fa-arrow-right"></i> Terms of Service</a>
+                        <a href="#"><i class="fas fa-arrow-right"></i> Cookie Policy</a>
+                        <a href="#"><i class="fas fa-arrow-right"></i> GDPR</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ChatApp. All rights reserved.</p>
+                <!-- <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a> -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
