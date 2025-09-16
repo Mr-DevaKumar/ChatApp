@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Connect to WebSocket server
     function connectWebSocket() {
         // In production, replace with your server URL
-        ws = new WebSocket(`ws://localhost:3000?room=${roomId}&user=${encodeURIComponent(currentUser)}`);
+        ws = new WebSocket(`ws://https://chatapp-backend-zt0o.onrender.com?room=${roomId}&user=${encodeURIComponent(currentUser)}`);
         
         ws.onopen = function() {
             console.log('Connected to WebSocket server');

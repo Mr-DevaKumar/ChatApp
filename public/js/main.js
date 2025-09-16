@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check WebSocket connection status
     function updateConnectionStatus() {
         // Create a test WebSocket connection
-        const testWs = new WebSocket('ws://localhost:3000');
+        const testWs = new WebSocket('ws://https://chatapp-backend-zt0o.onrender.com');
         
         testWs.onopen = function() {
             connectionStatus.textContent = 'Connected to server';
